@@ -2,37 +2,37 @@
 
 Ohter languages: [English](README.md), [日本語](README.ja.md)
 
-Spring Boot Statistics Dashboard
+Spring Boot Statisticsダッシュボード
 
 ![Statistics](https://github.com/acroquest/micrometer-kibana-dashboard/blob/media/SpringBootStatistics.gif)
 
-Spring Boot Application Dashboard
+Spring Boot Applicationダッシュボード
 
 ![Application](https://github.com/acroquest/micrometer-kibana-dashboard/blob/media/SpringBootApplication.gif)
 
-## Startup Elasticsearch/Kibana
+## Elasticsearch/Kibana起動
 
-Run startup script.
+起動スクリプトを実行する。
 ```
 ./elastic_docker.sh
 ```
 
-## Setup Kibana dashboard
+## Kibanaダッシュボードセットアップ
 
-Edit kibana_setup.sh if necessary.
+kibana_setup.shの設定を必要に応じて修正する。
 ```
 export KIBANA_HOST=localhost
 export KIBANA_PORT=5601
 ```
 
-Run setup script.
+セットアップスクリプトを実行する。
 ```
 ./kibana_setup.sh
 ```
 
-## Application Settings
+## アプリケーション設定
 
-Add dependencies.
+dependencyを追加する。
 ```
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -48,7 +48,7 @@ Add dependencies.
     </dependency>
 ```
 
-Add application properties.
+アプリケーションプロパティに以下の設定を追加する。
 ```
 management.metrics.export.elastic.enabled=true
 management.metrics.export.elastic.step=10s
