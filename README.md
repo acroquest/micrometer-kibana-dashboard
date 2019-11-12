@@ -2,6 +2,14 @@
 
 Ohter languages: [English](README.md), [日本語](README.ja.md)
 
+Spring Boot Statistics Dashboard
+
+![Statistics](https://github.com/acroquest/micrometer-kibana-dashboard/blob/media/SpringBootStatistics.gif)
+
+Spring Boot Application Dashboard
+
+![Application](https://github.com/acroquest/micrometer-kibana-dashboard/blob/media/SpringBootApplication.gif)
+
 ## Startup Elasticsearch/Kibana
 
 Run startup script.
