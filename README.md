@@ -1,6 +1,6 @@
 # Micrometer Kibana Dashboard
 
-Ohter languages: [English](README.md), [日本語](README.ja.md)
+Other languages: [English](README.md), [日本語](README.ja.md)
 
 Spring Boot Statistics Dashboard
 
