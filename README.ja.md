@@ -12,14 +12,14 @@ Spring Boot Applicationダッシュボード
 
 ## Elasticsearch/Kibana起動
 
-起動スクリプトを実行する。
+### 起動スクリプトを実行する。
 ```
 ./elastic_docker.sh
 ```
 
 ## Kibanaダッシュボードセットアップ
 
-kibana_setup.shの設定を必要に応じて修正する。
+### kibana_setup.shの設定を必要に応じて修正する。
 ```
 KIBANA_HOST=localhost
 KIBANA_PORT=5601
@@ -27,14 +27,14 @@ KIBANA_USER=
 KIBANA_PASSWORD=
 ```
 
-セットアップスクリプトを実行する。
+### セットアップスクリプトを実行する。
 ```
 ./kibana_setup.sh
 ```
 
 ## アプリケーション設定
 
-dependencyを追加する。
+### dependencyを追加する。
 ```
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -50,15 +50,34 @@ dependencyを追加する。
     </dependency>
 ```
 
-アプリケーションプロパティに以下の設定を追加する。
+### アプリケーションプロパティに設定を追加する。
+
+#### 共通設定
 ```
 management.metrics.export.elastic.enabled=true
 management.metrics.export.elastic.step=10s
 management.metrics.export.elastic.index=metrics
-management.metrics.export.elastic.host=http://localhost:9200
 management.metrics.distribution.percentiles-histogram.http.server.requests=true
 management.metrics.distribution.sla.http.server.requests=100ms, 400ms, 500ms, 2000ms
 management.metrics.distribution.percentiles.http.server.requests=0.5, 0.9, 0.95, 0.99
+```
+以下の設定は環境に応じて変更する。
+
+#### Elasticsearchホスト
+```
+management.metrics.export.elastic.host=http://localhost:9200
+```
+
+#### ホスト名およびアプリケーション名
+ダッシュボードのフィルタ条件として使用する。
+```
 management.metrics.tags.host=HOSTNAME
 management.metrics.tags.application=APPLICATION
+```
+
+#### ユーザ／パスワード
+ElasticsearchにBasic認証を設定している場合、ユーザ名およびパスワードの設定を行う。
+```
+management.metrics.export.elastic.user-name=elastic
+management.metrics.export.elastic.password=changeme
 ```
