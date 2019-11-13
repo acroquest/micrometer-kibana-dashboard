@@ -21,8 +21,10 @@ Run startup script.
 
 Edit kibana_setup.sh if necessary.
 ```
-export KIBANA_HOST=localhost
-export KIBANA_PORT=5601
+KIBANA_HOST=localhost
+KIBANA_PORT=5601
+KIBANA_USER=
+KIBANA_PASSWORD=
 ```
 
 Run setup script.
