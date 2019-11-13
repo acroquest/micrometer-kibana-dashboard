@@ -12,14 +12,14 @@ Spring Boot Application Dashboard
 
 ## Startup Elasticsearch/Kibana
 
-Run startup script.
+### Run startup script.
 ```
 ./elastic_docker.sh
 ```
 
 ## Setup Kibana dashboard
 
-Edit kibana_setup.sh if necessary.
+### Edit kibana_setup.sh if necessary.
 ```
 KIBANA_HOST=localhost
 KIBANA_PORT=5601
@@ -27,14 +27,14 @@ KIBANA_USER=
 KIBANA_PASSWORD=
 ```
 
-Run setup script.
+### Run setup script.
 ```
 ./kibana_setup.sh
 ```
 
 ## Application Settings
 
-Add dependencies.
+### Add dependencies.
 ```
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -50,15 +50,35 @@ Add dependencies.
     </dependency>
 ```
 
-Add application properties.
+### Add application properties.
+
+#### Common settings
 ```
 management.metrics.export.elastic.enabled=true
 management.metrics.export.elastic.step=10s
 management.metrics.export.elastic.index=metrics
-management.metrics.export.elastic.host=http://localhost:9200
 management.metrics.distribution.percentiles-histogram.http.server.requests=true
 management.metrics.distribution.sla.http.server.requests=100ms, 400ms, 500ms, 2000ms
 management.metrics.distribution.percentiles.http.server.requests=0.5, 0.9, 0.95, 0.99
+```
+Modify following settings depending on the environment.
+
+#### Elasticsearch host
+```
+management.metrics.export.elastic.host=http://localhost:9200
+```
+
+#### Host name and Application name
+These values are used in filtering conditions of the dashboard.
+```
 management.metrics.tags.host=HOSTNAME
 management.metrics.tags.application=APPLICATION
+```
+
+#### User/Password
+
+Add user/password settings if Basic authentication is applied to the Elasticsearch.
+```
+management.metrics.export.elastic.user-name=elastic
+management.metrics.export.elastic.password=changeme
 ```
