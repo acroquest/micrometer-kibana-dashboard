@@ -23,8 +23,8 @@ Spring Boot Applicationダッシュボード
 ```
 KIBANA_HOST=localhost
 KIBANA_PORT=5601
-KIBANA_USER=
-KIBANA_PASSWORD=
+ELASTIC_USER=
+ELASTIC_PASSWORD=
 ```
 
 ### セットアップスクリプトを実行する。
