@@ -23,8 +23,8 @@ Spring Boot Application Dashboard
 ```
 KIBANA_HOST=localhost
 KIBANA_PORT=5601
-KIBANA_USER=
-KIBANA_PASSWORD=
+ELASTIC_USER=
+ELASTIC_PASSWORD=
 ```
 
 ### Run setup script.
