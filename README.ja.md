@@ -21,8 +21,10 @@ Spring Boot Applicationダッシュボード
 
 kibana_setup.shの設定を必要に応じて修正する。
 ```
-export KIBANA_HOST=localhost
-export KIBANA_PORT=5601
+KIBANA_HOST=localhost
+KIBANA_PORT=5601
+KIBANA_USER=
+KIBANA_PASSWORD=
 ```
 
 セットアップスクリプトを実行する。
