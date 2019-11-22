@@ -12,9 +12,9 @@ Spring Boot Application Dashboard
 
 ## Startup Elasticsearch/Kibana
 
-### Run startup script.
+### Run docker-compose.
 ```
-./elastic_docker.sh
+docker-compose up -d
 ```
 
 ## Setup Kibana dashboard
@@ -26,10 +26,21 @@ KIBANA_PORT=5601
 ELASTIC_USER=
 ELASTIC_PASSWORD=
 ```
+for Windows, edit kibana_setup.bat.
+```
+set KIBANA_HOST=localhost
+set KIBANA_PORT=5601
+set ELASTIC_USER=
+set ELASTIC_PASSWORD=
+```
 
 ### Run setup script.
 ```
 ./kibana_setup.sh
+```
+for Windows:
+```
+kibana_setup.bat
 ```
 
 ## Application Settings

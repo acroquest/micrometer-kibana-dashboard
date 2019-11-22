@@ -12,9 +12,9 @@ Spring Boot Applicationダッシュボード
 
 ## Elasticsearch/Kibana起動
 
-### 起動スクリプトを実行する。
+### docker-composeを実行する。
 ```
-./elastic_docker.sh
+docker-compose up -d
 ```
 
 ## Kibanaダッシュボードセットアップ
@@ -26,10 +26,21 @@ KIBANA_PORT=5601
 ELASTIC_USER=
 ELASTIC_PASSWORD=
 ```
+Windowsの場合はkibana_setup.batを修正する。
+```
+set KIBANA_HOST=localhost
+set KIBANA_PORT=5601
+set ELASTIC_USER=
+set ELASTIC_PASSWORD=
+```
 
 ### セットアップスクリプトを実行する。
 ```
 ./kibana_setup.sh
+```
+Windowsの場合:
+```
+kibana_setup.bat
 ```
 
 ## アプリケーション設定
