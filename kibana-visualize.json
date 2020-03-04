@@ -1,0 +1,1560 @@
+[
+  {
+    "_id": "e1d0f010-9ee7-11e7-8711-e7a007dcef99",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Unique Visitors vs. Average Bytes",
+      "visState": "{\"title\":\"[Logs] Unique Visitors vs. Average Bytes\",\"type\":\"area\",\"params\":{\"type\":\"area\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Avg. Bytes\"}},{\"id\":\"ValueAxis-2\",\"name\":\"RightAxis-1\",\"type\":\"value\",\"position\":\"right\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Unique Visitors\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Avg. Bytes\",\"id\":\"1\"},\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"linear\",\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"stacked\",\"type\":\"line\",\"drawLinesBetweenPoints\":false,\"showCircles\":true,\"interpolate\":\"linear\",\"data\":{\"id\":\"2\",\"label\":\"Unique Visitors\"},\"valueAxis\":\"ValueAxis-2\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"radiusRatio\":17},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Avg. Bytes\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"clientip\",\"customLabel\":\"Unique Visitors\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"4\",\"enabled\":true,\"type\":\"count\",\"schema\":\"radius\",\"params\":{}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Avg. Bytes\":\"#70DBED\",\"Unique Visitors\":\"#0A437C\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      }
+    ]
+  },
+  {
+    "_id": "06cf9c40-9ee8-11e7-8711-e7a007dcef99",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Unique Visitors by Country",
+      "visState": "{\"title\":\"[Logs] Unique Visitors by Country\",\"type\":\"region_map\",\"params\":{\"legendPosition\":\"bottomright\",\"addTooltip\":true,\"colorSchema\":\"Reds\",\"selectedLayer\":{\"attribution\":\"<p><a href=\\\"http://www.naturalearthdata.com/about/terms-of-use\\\">Made with NaturalEarth</a> | <a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"name\":\"World Countries\",\"weight\":1,\"format\":{\"type\":\"geojson\"},\"url\":\"https://vector.maps.elastic.co/blob/5659313586569216?elastic_tile_service_tos=agree&my_app_version=6.2.3&license=77ab0ecf-a521-499d-bd52-fbd740bb81d0\",\"fields\":[{\"name\":\"iso2\",\"description\":\"Two letter abbreviation\"},{\"name\":\"name\",\"description\":\"Country name\"},{\"name\":\"iso3\",\"description\":\"Three letter abbreviation\"}],\"created_at\":\"2017-04-26T17:12:15.978370\",\"tags\":[],\"id\":5659313586569216,\"layerId\":\"elastic_maps_service.World Countries\"},\"selectedJoinField\":{\"name\":\"iso2\",\"description\":\"Two letter abbreviation\"},\"isDisplayWarning\":false,\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"baseLayersAreLoaded\":{},\"tmsLayers\":[{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.2.3&license=77ab0ecf-a521-499d-bd52-fbd740bb81d0\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"http://www.openstreetmap.org/copyright\\\">OpenStreetMap</a> contributors | <a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}],\"selectedTmsLayer\":{\"id\":\"road_map\",\"url\":\"https://tiles.maps.elastic.co/v2/default/{z}/{x}/{y}.png?elastic_tile_service_tos=agree&my_app_name=kibana&my_app_version=6.2.3&license=77ab0ecf-a521-499d-bd52-fbd740bb81d0\",\"minZoom\":0,\"maxZoom\":18,\"attribution\":\"<p>&#169; <a href=\\\"http://www.openstreetmap.org/copyright\\\">OpenStreetMap</a> contributors | <a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\",\"subdomains\":[]}},\"mapZoom\":2,\"mapCenter\":[0,0],\"outlineWeight\":1,\"showAllShapes\":true,\"emsHotLink\":null},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"clientip\",\"customLabel\":\"Unique Visitors\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"geo.src\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      }
+    ]
+  },
+  {
+    "_id": "935afa20-e0cd-11e7-9d07-1398ccfcefa3",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Heatmap",
+      "visState": "{\"title\":\"[Logs] Heatmap\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":true,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":10,\"colorSchema\":\"Reds\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\",\"overwriteColor\":false}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"clientip\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"geo.src\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Country Source\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"hour_of_day\",\"size\":25,\"order\":\"asc\",\"orderBy\":\"_key\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Hour of Day\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 4\":\"rgb(255,245,240)\",\"4 - 8\":\"rgb(254,228,216)\",\"8 - 12\":\"rgb(253,202,181)\",\"12 - 16\":\"rgb(252,171,142)\",\"16 - 20\":\"rgb(252,138,106)\",\"20 - 24\":\"rgb(251,106,74)\",\"24 - 28\":\"rgb(241,68,50)\",\"28 - 32\":\"rgb(217,38,35)\",\"32 - 36\":\"rgb(188,20,26)\",\"36 - 40\":\"rgb(152,12,19)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      }
+    ]
+  },
+  {
+    "_id": "4eb6e500-e1c7-11e7-b6d5-4dc382ef7f5b",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Host, Visits and Bytes Table",
+      "visState": "{\"title\":\"[Logs] Host, Visits and Bytes Table\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"table\",\"series\":[{\"id\":\"bd09d600-e5b1-11e7-bfc2-a1f7e71965a1\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"bd09d601-e5b1-11e7-bfc2-a1f7e71965a1\",\"type\":\"sum\",\"field\":\"bytes\"},{\"sigma\":\"\",\"id\":\"c9514c90-e5b1-11e7-bfc2-a1f7e71965a1\",\"type\":\"sum_bucket\",\"field\":\"bd09d601-e5b1-11e7-bfc2-a1f7e71965a1\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"color_rules\":[{\"id\":\"c0c668d0-e5b1-11e7-bfc2-a1f7e71965a1\"}],\"label\":\"Bytes (Total)\"},{\"id\":\"b7672c30-a6df-11e8-8b18-1da1dfc50975\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"b7672c31-a6df-11e8-8b18-1da1dfc50975\",\"type\":\"sum\",\"field\":\"bytes\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"color_rules\":[{\"id\":\"c0c668d0-e5b1-11e7-bfc2-a1f7e71965a1\"}],\"label\":\"Bytes (Last Hour)\"},{\"id\":\"f2c20700-a6df-11e8-8b18-1da1dfc50975\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"f2c20701-a6df-11e8-8b18-1da1dfc50975\",\"type\":\"cardinality\",\"field\":\"ip\"},{\"sigma\":\"\",\"id\":\"f46333e0-a6df-11e8-8b18-1da1dfc50975\",\"type\":\"sum_bucket\",\"field\":\"f2c20701-a6df-11e8-8b18-1da1dfc50975\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Unique Visits (Total)\",\"color_rules\":[{\"value\":1000,\"id\":\"2e963080-a6e0-11e8-8b18-1da1dfc50975\",\"text\":\"rgba(211,49,21,1)\",\"operator\":\"lt\"},{\"value\":1000,\"id\":\"3d4fb880-a6e0-11e8-8b18-1da1dfc50975\",\"text\":\"rgba(252,196,0,1)\",\"operator\":\"gte\"},{\"value\":1500,\"id\":\"435f8a20-a6e0-11e8-8b18-1da1dfc50975\",\"text\":\"rgba(104,188,0,1)\",\"operator\":\"gte\"}],\"offset_time\":\"\",\"value_template\":\"\",\"trend_arrows\":1},{\"id\":\"46fd7fc0-e5b1-11e7-bfc2-a1f7e71965a1\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"46fd7fc1-e5b1-11e7-bfc2-a1f7e71965a1\",\"type\":\"cardinality\",\"field\":\"ip\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Unique Visits (Last Hour)\",\"color_rules\":[{\"value\":10,\"id\":\"4e90aeb0-a6e0-11e8-8b18-1da1dfc50975\",\"text\":\"rgba(211,49,21,1)\",\"operator\":\"lt\"},{\"value\":10,\"id\":\"6d59b1c0-a6e0-11e8-8b18-1da1dfc50975\",\"text\":\"rgba(252,196,0,1)\",\"operator\":\"gte\"},{\"value\":25,\"id\":\"77578670-a6e0-11e8-8b18-1da1dfc50975\",\"text\":\"rgba(104,188,0,1)\",\"operator\":\"gte\"}],\"offset_time\":\"\",\"value_template\":\"\",\"trend_arrows\":1}],\"time_field\":\"timestamp\",\"index_pattern\":\"kibana_sample_data_logs\",\"interval\":\"1h\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"bar_color_rules\":[{\"id\":\"e9b4e490-e1c6-11e7-b4f6-0f68c45f7387\"}],\"pivot_id\":\"extension.keyword\",\"pivot_label\":\"Type\",\"drilldown_url\":\"\",\"axis_scale\":\"normal\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "69a34b00-9ee8-11e7-8711-e7a007dcef99",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Goals",
+      "visState": "{\"title\":\"[Logs] Goals\",\"type\":\"gauge\",\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":false,\"gauge\":{\"verticalSplit\":false,\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":500},{\"from\":500,\"to\":1000},{\"from\":1000,\"to\":1500}],\"invertColors\":true,\"labels\":{\"show\":false,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"#eee\",\"bgColor\":false,\"subText\":\"visitors\",\"fontSize\":60,\"labelColor\":true}},\"isDisplayWarning\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"clientip\",\"customLabel\":\"Unique Visitors\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 500\":\"rgb(165,0,38)\",\"500 - 1000\":\"rgb(255,255,190)\",\"1000 - 1500\":\"rgb(0,104,55)\"},\"colors\":{\"75 - 100\":\"#629E51\",\"50 - 75\":\"#EAB839\",\"0 - 50\":\"#E24D42\",\"0 - 100\":\"#E24D42\",\"200 - 300\":\"#7EB26D\",\"500 - 1000\":\"#E5AC0E\",\"0 - 500\":\"#E24D42\",\"1000 - 1500\":\"#7EB26D\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      }
+    ]
+  },
+  {
+    "_id": "42b997f0-0c26-11e8-b0ec-3bb475f6b6ff",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] File Type Scatter Plot",
+      "visState": "{\"title\":\"[Logs] File Type Scatter Plot\",\"type\":\"vega\",\"params\":{\"spec\":\"{\\n  $schema: \\\"https://vega.github.io/schema/vega-lite/v2.json\\\"\\n  // Use points for drawing to actually create a scatterplot\\n  mark: point\\n  // Specify where to load data from\\n  data: {\\n    // By using an object to the url parameter we will\\n    // construct an Elasticsearch query\\n    url: {\\n      // Context == true means filters of the dashboard will be taken into account\\n      %context%: true\\n      // Specify on which field the time picker should operate\\n      %timefield%: timestamp\\n      // Specify the index pattern to load data from\\n      index: kibana_sample_data_logs\\n      // This body will be send to Elasticsearch's _search endpoint\\n      // You can use everything the ES Query DSL supports here\\n      body: {\\n        // Set the size to load 10000 documents\\n        size: 10000,\\n        // Just ask for the fields we actually need for visualization\\n        _source: [\\\"timestamp\\\", \\\"bytes\\\", \\\"extension\\\"]\\n      }\\n    }\\n    // Tell Vega, that the array of data will be inside hits.hits of the response\\n    // since the result returned from Elasticsearch fill have a format like:\\n    // {\\n    //   hits: {\\n    //     total: 42000,\\n    //     max_score: 2,\\n    //     hits: [\\n    //       < our individual documents >\\n    //     ]\\n    //   }\\n    // }\\n    format: { property: \\\"hits.hits\\\" }\\n  }\\n  // You can do transformation and calculation of the data before drawing it\\n  transform: [\\n    // Since timestamp is a string value, we need to convert it to a unix timestamp\\n    // so that Vega can work on it properly.\\n    {\\n      // Convert _source.timestamp field to a date\\n      calculate: \\\"toDate(datum._source['timestamp'])\\\"\\n      // Store the result in a field named \\\"time\\\" in the object\\n      as: \\\"time\\\"\\n    }\\n  ]\\n  // Specify what data will be drawn on which axis\\n  encoding: {\\n    x: {\\n      // Draw the time field on the x-axis in temporal mode (i.e. as a time axis)\\n      field: time\\n      type: temporal\\n      // Hide the axis label for the x-axis\\n      axis: { title: false }\\n    }\\n    y: {\\n      // Draw the bytes of each document on the y-axis\\n      field: _source.bytes\\n      // Mark the y-axis as quantitative\\n      type: quantitative\\n      // Specify the label for this axis\\n      axis: { title: \\\"Transferred bytes\\\" }\\n    }\\n    color: {\\n      // Make the color of each point depend on the _source.extension field\\n      field: _source.extension\\n      // Treat different values as completely unrelated values to each other.\\n      // You could switch this to quantitative if you have a numeric field and\\n      // want to create a color scale from one color to another depending on that\\n      // field's value.\\n      type: nominal\\n      // Rename the legend title so it won't just state: \\\"_source.extension\\\"\\n      legend: { title: 'File type' }\\n    }\\n    shape: {\\n      // Also make the shape of each point dependent on the extension.\\n      field: _source.extension\\n      type: nominal\\n    }\\n  }\\n}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "7cbd2350-2223-11e8-b802-5bcf64c2cfb4",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Source and Destination Sankey Chart",
+      "visState": "{\"title\":\"[Logs] Source and Destination Sankey Chart\",\"type\":\"vega\",\"params\":{\"spec\":\"{ \\n $schema: https://vega.github.io/schema/vega/v3.0.json\\n  data: [\\n\\t{\\n  \\t// query ES based on the currently selected time range and filter string\\n  \\tname: rawData\\n  \\turl: {\\n    \\t%context%: true\\n    \\t%timefield%: timestamp\\n    \\tindex: kibana_sample_data_logs\\n    \\tbody: {\\n      \\tsize: 0\\n      \\taggs: {\\n        \\ttable: {\\n          \\tcomposite: {\\n            \\tsize: 10000\\n            \\tsources: [\\n              \\t{\\n                \\tstk1: {\\n                  \\tterms: {field: \\\"geo.src\\\"}\\n                \\t}\\n              \\t}\\n              \\t{\\n                \\tstk2: {\\n                  \\tterms: {field: \\\"geo.dest\\\"}\\n                \\t}\\n              \\t}\\n            \\t]\\n          \\t}\\n        \\t}\\n      \\t}\\n    \\t}\\n  \\t}\\n  \\t// From the result, take just the data we are interested in\\n  \\tformat: {property: \\\"aggregations.table.buckets\\\"}\\n  \\t// Convert key.stk1 -> stk1 for simpler access below\\n  \\ttransform: [\\n    \\t{type: \\\"formula\\\", expr: \\\"datum.key.stk1\\\", as: \\\"stk1\\\"}\\n    \\t{type: \\\"formula\\\", expr: \\\"datum.key.stk2\\\", as: \\\"stk2\\\"}\\n    \\t{type: \\\"formula\\\", expr: \\\"datum.doc_count\\\", as: \\\"size\\\"}\\n  \\t]\\n\\t}\\n\\t{\\n  \\tname: nodes\\n  \\tsource: rawData\\n  \\ttransform: [\\n    \\t// when a country is selected, filter out unrelated data\\n    \\t{\\n      \\ttype: filter\\n      \\texpr: !groupSelector || groupSelector.stk1 == datum.stk1 || groupSelector.stk2 == datum.stk2\\n    \\t}\\n    \\t// Set new key for later lookups - identifies each node\\n    \\t{type: \\\"formula\\\", expr: \\\"datum.stk1+datum.stk2\\\", as: \\\"key\\\"}\\n    \\t// instead of each table row, create two new rows,\\n    \\t// one for the source (stack=stk1) and one for destination node (stack=stk2).\\n    \\t// The country code stored in stk1 and stk2 fields is placed into grpId field.\\n    \\t{\\n      \\ttype: fold\\n      \\tfields: [\\\"stk1\\\", \\\"stk2\\\"]\\n      \\tas: [\\\"stack\\\", \\\"grpId\\\"]\\n    \\t}\\n    \\t// Create a sortkey, different for stk1 and stk2 stacks.\\n    \\t{\\n      \\ttype: formula\\n      \\texpr: datum.stack == 'stk1' ? datum.stk1+datum.stk2 : datum.stk2+datum.stk1\\n      \\tas: sortField\\n    \\t}\\n    \\t// Calculate y0 and y1 positions for stacking nodes one on top of the other,\\n    \\t// independently for each stack, and ensuring they are in the proper order,\\n    \\t// alphabetical from the top (reversed on the y axis)\\n    \\t{\\n      \\ttype: stack\\n      \\tgroupby: [\\\"stack\\\"]\\n      \\tsort: {field: \\\"sortField\\\", order: \\\"descending\\\"}\\n      \\tfield: size\\n    \\t}\\n    \\t// calculate vertical center point for each node, used to draw edges\\n    \\t{type: \\\"formula\\\", expr: \\\"(datum.y0+datum.y1)/2\\\", as: \\\"yc\\\"}\\n  \\t]\\n\\t}\\n\\t{\\n  \\tname: groups\\n  \\tsource: nodes\\n  \\ttransform: [\\n    \\t// combine all nodes into country groups, summing up the doc counts\\n    \\t{\\n      \\ttype: aggregate\\n      \\tgroupby: [\\\"stack\\\", \\\"grpId\\\"]\\n      \\tfields: [\\\"size\\\"]\\n      \\tops: [\\\"sum\\\"]\\n      \\tas: [\\\"total\\\"]\\n    \\t}\\n    \\t// re-calculate the stacking y0,y1 values\\n    \\t{\\n      \\ttype: stack\\n      \\tgroupby: [\\\"stack\\\"]\\n      \\tsort: {field: \\\"grpId\\\", order: \\\"descending\\\"}\\n      \\tfield: total\\n    \\t}\\n    \\t// project y0 and y1 values to screen coordinates\\n    \\t// doing it once here instead of doing it several times in marks\\n    \\t{type: \\\"formula\\\", expr: \\\"scale('y', datum.y0)\\\", as: \\\"scaledY0\\\"}\\n    \\t{type: \\\"formula\\\", expr: \\\"scale('y', datum.y1)\\\", as: \\\"scaledY1\\\"}\\n    \\t// boolean flag if the label should be on the right of the stack\\n    \\t{type: \\\"formula\\\", expr: \\\"datum.stack == 'stk1'\\\", as: \\\"rightLabel\\\"}\\n    \\t// Calculate traffic percentage for this country using \\\"y\\\" scale\\n    \\t// domain upper bound, which represents the total traffic\\n    \\t{\\n      \\ttype: formula\\n      \\texpr: datum.total/domain('y')[1]\\n      \\tas: percentage\\n    \\t}\\n  \\t]\\n\\t}\\n\\t{\\n  \\t// This is a temp lookup table with all the 'stk2' stack nodes\\n  \\tname: destinationNodes\\n  \\tsource: nodes\\n  \\ttransform: [\\n    \\t{type: \\\"filter\\\", expr: \\\"datum.stack == 'stk2'\\\"}\\n  \\t]\\n\\t}\\n\\t{\\n  \\tname: edges\\n  \\tsource: nodes\\n  \\ttransform: [\\n    \\t// we only want nodes from the left stack\\n    \\t{type: \\\"filter\\\", expr: \\\"datum.stack == 'stk1'\\\"}\\n    \\t// find corresponding node from the right stack, keep it as \\\"target\\\"\\n    \\t{\\n      \\ttype: lookup\\n      \\tfrom: destinationNodes\\n      \\tkey: key\\n      \\tfields: [\\\"key\\\"]\\n      \\tas: [\\\"target\\\"]\\n    \\t}\\n    \\t// calculate SVG link path between stk1 and stk2 stacks for the node pair\\n    \\t{\\n      \\ttype: linkpath\\n      \\torient: horizontal\\n      \\tshape: diagonal\\n      \\tsourceY: {expr: \\\"scale('y', datum.yc)\\\"}\\n      \\tsourceX: {expr: \\\"scale('x', 'stk1') + bandwidth('x')\\\"}\\n      \\ttargetY: {expr: \\\"scale('y', datum.target.yc)\\\"}\\n      \\ttargetX: {expr: \\\"scale('x', 'stk2')\\\"}\\n    \\t}\\n    \\t// A little trick to calculate the thickness of the line.\\n    \\t// The value needs to be the same as the hight of the node, but scaling\\n    \\t// size to screen's height gives inversed value because screen's Y\\n    \\t// coordinate goes from the top to the bottom, whereas the graph's Y=0\\n    \\t// is at the bottom. So subtracting scaled doc count from screen height\\n    \\t// (which is the \\\"lower\\\" bound of the \\\"y\\\" scale) gives us the right value\\n    \\t{\\n      \\ttype: formula\\n      \\texpr: range('y')[0]-scale('y', datum.size)\\n      \\tas: strokeWidth\\n    \\t}\\n    \\t// Tooltip needs individual link's percentage of all traffic\\n    \\t{\\n      \\ttype: formula\\n      \\texpr: datum.size/domain('y')[1]\\n      \\tas: percentage\\n    \\t}\\n  \\t]\\n\\t}\\n  ]\\n  scales: [\\n\\t{\\n  \\t// calculates horizontal stack positioning\\n  \\tname: x\\n  \\ttype: band\\n  \\trange: width\\n  \\tdomain: [\\\"stk1\\\", \\\"stk2\\\"]\\n  \\tpaddingOuter: 0.05\\n  \\tpaddingInner: 0.95\\n\\t}\\n\\t{\\n  \\t// this scale goes up as high as the highest y1 value of all nodes\\n  \\tname: y\\n  \\ttype: linear\\n  \\trange: height\\n  \\tdomain: {data: \\\"nodes\\\", field: \\\"y1\\\"}\\n\\t}\\n\\t{\\n  \\t// use rawData to ensure the colors stay the same when clicking.\\n  \\tname: color\\n  \\ttype: ordinal\\n  \\trange: category\\n  \\tdomain: {data: \\\"rawData\\\", field: \\\"stk1\\\"}\\n\\t}\\n\\t{\\n  \\t// this scale is used to map internal ids (stk1, stk2) to stack names\\n  \\tname: stackNames\\n  \\ttype: ordinal\\n  \\trange: [\\\"Source\\\", \\\"Destination\\\"]\\n  \\tdomain: [\\\"stk1\\\", \\\"stk2\\\"]\\n\\t}\\n  ]\\n  axes: [\\n\\t{\\n  \\t// x axis should use custom label formatting to print proper stack names\\n  \\torient: bottom\\n  \\tscale: x\\n  \\tencode: {\\n    \\tlabels: {\\n      \\tupdate: {\\n        \\ttext: {scale: \\\"stackNames\\\", field: \\\"value\\\"}\\n      \\t}\\n    \\t}\\n  \\t}\\n\\t}\\n\\t{orient: \\\"left\\\", scale: \\\"y\\\"}\\n  ]\\n  marks: [\\n\\t{\\n  \\t// draw the connecting line between stacks\\n  \\ttype: path\\n  \\tname: edgeMark\\n  \\tfrom: {data: \\\"edges\\\"}\\n  \\t// this prevents some autosizing issues with large strokeWidth for paths\\n  \\tclip: true\\n  \\tencode: {\\n    \\tupdate: {\\n      \\t// By default use color of the left node, except when showing traffic\\n      \\t// from just one country, in which case use destination color.\\n      \\tstroke: [\\n        \\t{\\n          \\ttest: groupSelector && groupSelector.stack=='stk1'\\n          \\tscale: color\\n          \\tfield: stk2\\n        \\t}\\n        \\t{scale: \\\"color\\\", field: \\\"stk1\\\"}\\n      \\t]\\n      \\tstrokeWidth: {field: \\\"strokeWidth\\\"}\\n      \\tpath: {field: \\\"path\\\"}\\n      \\t// when showing all traffic, and hovering over a country,\\n      \\t// highlight the traffic from that country.\\n      \\tstrokeOpacity: {\\n        \\tsignal: !groupSelector && (groupHover.stk1 == datum.stk1 || groupHover.stk2 == datum.stk2) ? 0.9 : 0.3\\n      \\t}\\n      \\t// Ensure that the hover-selected edges show on top\\n      \\tzindex: {\\n        \\tsignal: !groupSelector && (groupHover.stk1 == datum.stk1 || groupHover.stk2 == datum.stk2) ? 1 : 0\\n      \\t}\\n      \\t// format tooltip string\\n      \\ttooltip: {\\n        \\tsignal: datum.stk1 + ' → ' + datum.stk2 + '\\t' + format(datum.size, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'\\n      \\t}\\n    \\t}\\n    \\t// Simple mouseover highlighting of a single line\\n    \\thover: {\\n      \\tstrokeOpacity: {value: 1}\\n    \\t}\\n  \\t}\\n\\t}\\n\\t{\\n  \\t// draw stack groups (countries)\\n  \\ttype: rect\\n  \\tname: groupMark\\n  \\tfrom: {data: \\\"groups\\\"}\\n  \\tencode: {\\n    \\tenter: {\\n      \\tfill: {scale: \\\"color\\\", field: \\\"grpId\\\"}\\n      \\twidth: {scale: \\\"x\\\", band: 1}\\n    \\t}\\n    \\tupdate: {\\n      \\tx: {scale: \\\"x\\\", field: \\\"stack\\\"}\\n      \\ty: {field: \\\"scaledY0\\\"}\\n      \\ty2: {field: \\\"scaledY1\\\"}\\n      \\tfillOpacity: {value: 0.6}\\n      \\ttooltip: {\\n        \\tsignal: datum.grpId + '   ' + format(datum.total, ',.0f') + '   (' + format(datum.percentage, '.1%') + ')'\\n      \\t}\\n    \\t}\\n    \\thover: {\\n      \\tfillOpacity: {value: 1}\\n    \\t}\\n  \\t}\\n\\t}\\n\\t{\\n  \\t// draw country code labels on the inner side of the stack\\n  \\ttype: text\\n  \\tfrom: {data: \\\"groups\\\"}\\n  \\t// don't process events for the labels - otherwise line mouseover is unclean\\n  \\tinteractive: false\\n  \\tencode: {\\n    \\tupdate: {\\n      \\t// depending on which stack it is, position x with some padding\\n      \\tx: {\\n        \\tsignal: scale('x', datum.stack) + (datum.rightLabel ? bandwidth('x') + 8 : -8)\\n      \\t}\\n      \\t// middle of the group\\n      \\tyc: {signal: \\\"(datum.scaledY0 + datum.scaledY1)/2\\\"}\\n      \\talign: {signal: \\\"datum.rightLabel ? 'left' : 'right'\\\"}\\n      \\tbaseline: {value: \\\"middle\\\"}\\n      \\tfontWeight: {value: \\\"bold\\\"}\\n      \\t// only show text label if the group's height is large enough\\n      \\ttext: {signal: \\\"abs(datum.scaledY0-datum.scaledY1) > 13 ? datum.grpId : ''\\\"}\\n    \\t}\\n  \\t}\\n\\t}\\n\\t{\\n  \\t// Create a \\\"show all\\\" button. Shown only when a country is selected.\\n  \\ttype: group\\n  \\tdata: [\\n    \\t// We need to make the button show only when groupSelector signal is true.\\n    \\t// Each mark is drawn as many times as there are elements in the backing data.\\n    \\t// Which means that if values list is empty, it will not be drawn.\\n    \\t// Here I create a data source with one empty object, and filter that list\\n    \\t// based on the signal value. This can only be done in a group.\\n    \\t{\\n      \\tname: dataForShowAll\\n      \\tvalues: [{}]\\n      \\ttransform: [{type: \\\"filter\\\", expr: \\\"groupSelector\\\"}]\\n    \\t}\\n  \\t]\\n  \\t// Set button size and positioning\\n  \\tencode: {\\n    \\tenter: {\\n      \\txc: {signal: \\\"width/2\\\"}\\n      \\ty: {value: 30}\\n      \\twidth: {value: 80}\\n      \\theight: {value: 30}\\n    \\t}\\n  \\t}\\n  \\tmarks: [\\n    \\t{\\n      \\t// This group is shown as a button with rounded corners.\\n      \\ttype: group\\n      \\t// mark name allows signal capturing\\n      \\tname: groupReset\\n      \\t// Only shows button if dataForShowAll has values.\\n      \\tfrom: {data: \\\"dataForShowAll\\\"}\\n      \\tencode: {\\n        \\tenter: {\\n          \\tcornerRadius: {value: 6}\\n          \\tfill: {value: \\\"#F5F7FA\\\"}\\n          \\tstroke: {value: \\\"#c1c1c1\\\"}\\n          \\tstrokeWidth: {value: 2}\\n          \\t// use parent group's size\\n          \\theight: {\\n            \\tfield: {group: \\\"height\\\"}\\n          \\t}\\n          \\twidth: {\\n            \\tfield: {group: \\\"width\\\"}\\n          \\t}\\n        \\t}\\n        \\tupdate: {\\n          \\t// groups are transparent by default\\n          \\topacity: {value: 1}\\n        \\t}\\n        \\thover: {\\n          \\topacity: {value: 0.7}\\n        \\t}\\n      \\t}\\n      \\tmarks: [\\n        \\t{\\n          \\ttype: text\\n          \\t// if true, it will prevent clicking on the button when over text.\\n          \\tinteractive: false\\n          \\tencode: {\\n            \\tenter: {\\n              \\t// center text in the paren group\\n              \\txc: {\\n                \\tfield: {group: \\\"width\\\"}\\n                \\tmult: 0.5\\n              \\t}\\n              \\tyc: {\\n                \\tfield: {group: \\\"height\\\"}\\n                \\tmult: 0.5\\n                \\toffset: 2\\n              \\t}\\n              \\talign: {value: \\\"center\\\"}\\n              \\tbaseline: {value: \\\"middle\\\"}\\n              \\tfontWeight: {value: \\\"bold\\\"}\\n              \\ttext: {value: \\\"Show All\\\"}\\n            \\t}\\n          \\t}\\n        \\t}\\n      \\t]\\n    \\t}\\n  \\t]\\n\\t}\\n  ]\\n  signals: [\\n\\t{\\n  \\t// used to highlight traffic to/from the same country\\n  \\tname: groupHover\\n  \\tvalue: {}\\n  \\ton: [\\n    \\t{\\n      \\tevents: @groupMark:mouseover\\n      \\tupdate: \\\"{stk1:datum.stack=='stk1' && datum.grpId, stk2:datum.stack=='stk2' && datum.grpId}\\\"\\n    \\t}\\n    \\t{events: \\\"mouseout\\\", update: \\\"{}\\\"}\\n  \\t]\\n\\t}\\n\\t// used to filter only the data related to the selected country\\n\\t{\\n  \\tname: groupSelector\\n  \\tvalue: false\\n  \\ton: [\\n    \\t{\\n      \\t// Clicking groupMark sets this signal to the filter values\\n      \\tevents: @groupMark:click!\\n      \\tupdate: \\\"{stack:datum.stack, stk1:datum.stack=='stk1' && datum.grpId, stk2:datum.stack=='stk2' && datum.grpId}\\\"\\n    \\t}\\n    \\t{\\n      \\t// Clicking \\\"show all\\\" button, or double-clicking anywhere resets it\\n      \\tevents: [\\n        \\t{type: \\\"click\\\", markname: \\\"groupReset\\\"}\\n        \\t{type: \\\"dblclick\\\"}\\n      \\t]\\n      \\tupdate: \\\"false\\\"\\n    \\t}\\n  \\t]\\n\\t}\\n  ]\\n}\\n\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "314c6f60-2224-11e8-b802-5bcf64c2cfb4",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Response Codes Over Time + Annotations",
+      "visState": "{\"title\":\"[Logs] Response Codes Over Time + Annotations\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(115,216,255,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"cardinality\",\"field\":\"ip\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"percent\",\"chart_type\":\"line\",\"line_width\":\"2\",\"point_size\":\"0\",\"fill\":\"0.5\",\"stacked\":\"percent\",\"terms_field\":\"response.keyword\",\"terms_order_by\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"label\":\"Response Code Count\",\"split_color_mode\":\"gradient\"}],\"time_field\":\"timestamp\",\"index_pattern\":\"kibana_sample_data_logs\",\"interval\":\">=4h\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"annotations\":[{\"fields\":\"geo.src, host\",\"template\":\"Security Error from {{geo.src}} on {{host}}\",\"index_pattern\":\"kibana_sample_data_logs\",\"query_string\":\"tags:error AND tags:security\",\"id\":\"bd7548a0-2223-11e8-832f-d5027f3c8a47\",\"color\":\"rgba(211,49,21,1)\",\"time_field\":\"timestamp\",\"icon\":\"fa-asterisk\",\"ignore_global_filters\":1,\"ignore_panel_filters\":1}],\"legend_position\":\"bottom\",\"axis_scale\":\"normal\",\"drop_last_bucket\":0},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "24a3e970-4257-11e8-b3aa-73fdaf54bfc9",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Input Controls",
+      "visState": "{\"title\":\"[Logs] Input Controls\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1523980210832\",\"fieldName\":\"geo.src\",\"label\":\"Source Country\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":100,\"order\":\"desc\"},\"parent\":\"\",\"indexPatternRefName\":\"control_0_index_pattern\"},{\"id\":\"1523980191978\",\"fieldName\":\"machine.os.keyword\",\"label\":\"OS\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":100,\"order\":\"desc\"},\"parent\":\"1523980210832\",\"indexPatternRefName\":\"control_1_index_pattern\"},{\"id\":\"1523980232790\",\"fieldName\":\"bytes\",\"label\":\"Bytes\",\"type\":\"range\",\"options\":{\"decimalPlaces\":0,\"step\":1024},\"indexPatternRefName\":\"control_2_index_pattern\"}],\"updateFiltersOnChange\":true,\"useTimeFilter\":true,\"pinFilters\":false},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "control_0_index_pattern",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      },
+      {
+        "name": "control_1_index_pattern",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      },
+      {
+        "name": "control_2_index_pattern",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      }
+    ]
+  },
+  {
+    "_id": "14e2e710-4258-11e8-b3aa-73fdaf54bfc9",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Visitors by OS",
+      "visState": "{\"title\":\"[Logs] Visitors by OS\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"machine.os.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "90943e30-9a47-11e8-b64d-95841ca0b247"
+      }
+    ]
+  },
+  {
+    "_id": "47f2c680-a6e3-11e8-94b4-c30c0228351b",
+    "_type": "visualization",
+    "_source": {
+      "title": "[Logs] Markdown Instructions",
+      "visState": "{\"title\":\"[Logs] Markdown Instructions\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"openLinksInNewTab\":true,\"markdown\":\"### Sample Logs Data\\nThis dashboard contains sample data for you to play with. You can view it, search it, and interact with the visualizations. For more information about Kibana, check our [docs](https://www.elastic.co/guide/en/kibana/current/index.html).\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "78cf0b90-ef14-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Basic Statistics - CPU Usage",
+      "visState": "{\"title\":\"Micrometer - Basic Statistics - CPU Usage\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"percent\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"System CPU Usage\",\"filter\":\"name:system_cpu_usage\"},{\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"percent\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Process CPU Usage\",\"filter\":\"name:process_cpu_usage\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"1\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "ff19a880-ef29-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Direct Buffers",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Direct Buffers\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"f04cfef0-ef2f-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"f04cfef1-ef2f-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Used\",\"filter\":\"name:jvm_buffer_memory_used \"},{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Capacity\",\"filter\":\"name:jvm_buffer_total_capacity \"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"id.keyword:\\\"direct\\\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "3086a240-ef2c-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Memory Allocate Promote",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Memory Allocate Promote\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Allocated\",\"filter\":\"name:jvm_gc_memory_allocated\"},{\"id\":\"f04cfef0-ef2f-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"f04cfef1-ef2f-11e9-8811-dbb4ffea035d\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Promoted\",\"filter\":\"name:jvm_gc_memory_promoted\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "3d640240-eb31-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Basic Statistics - Start time",
+      "visState": "{\"title\":\"Micrometer - Basic Statistics - Start time\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"date\",\"params\":{\"pattern\":\"HH:mm:ss\"}},\"params\":{},\"aggType\":\"max\"}]},\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":30,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"process_start_time\",\"customLabel\":\" \"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"key\":\"name\",\"negate\":false,\"params\":{\"query\":\"process_start_time\"},\"type\":\"phrase\",\"value\":\"process_start_time\",\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name\":{\"query\":\"process_start_time\",\"type\":\"phrase\"}}}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "2230d000-ef2a-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Mapped Buffers",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Mapped Buffers\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"f04cfef0-ef2f-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"f04cfef1-ef2f-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Used\",\"filter\":\"name:jvm_buffer_memory_used \"},{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Capacity\",\"filter\":\"name:jvm_buffer_total_capacity \"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"id.keyword:\\\"mapped\\\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "a00b5970-ef19-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Memory Usage (Compressed Class Space)",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Memory Usage (Compressed Class Space)\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Used\",\"filter\":\"name:jvm_memory_used \"},{\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Committed\",\"filter\":\"name:jvm_memory_committed \"},{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Max\",\"filter\":\"name:jvm_memory_max\",\"hide_in_legend\":0}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"id:\\\"Compressed Class Space\\\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "e595ee60-ef19-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Memory Usage (Metaspace)",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Memory Usage (Metaspace)\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Used\",\"filter\":\"name:jvm_memory_used \"},{\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Committed\",\"filter\":\"name:jvm_memory_committed \"},{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Max\",\"filter\":\"name:jvm_memory_max\",\"hide_in_legend\":0}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"id:\\\"Metaspace\\\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "50ec45b0-ef29-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Classes Unloaded",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Classes Unloaded\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Count\",\"filter\":\"name:jvm_classes_unloaded\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "832be7f0-eb29-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Tomcat Statistics - Thread Config Max",
+      "visState": "{\"title\":\"Micrometer - Tomcat Statistics - Thread Config Max\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":30}},\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"max\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"value\",\"customLabel\":\" \"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":false,\"type\":\"phrase\",\"key\":\"name\",\"value\":\"tomcat_threads_config_max\",\"params\":{\"query\":\"tomcat_threads_config_max\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name\":{\"query\":\"tomcat_threads_config_max\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "197052c0-ef29-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Classes Loaded",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Classes Loaded\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Count\",\"filter\":\"name:jvm_classes_loaded\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "7d7efb00-eb22-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HikariCP Statistics - Connection Timeout Count",
+      "visState": "{\"title\":\"Micrometer - HikariCP Statistics - Connection Timeout Count\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":30}},\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"sum\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"count\",\"customLabel\":\" \"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":false,\"type\":\"phrase\",\"key\":\"name\",\"value\":\"hikaricp_connections_timeout\",\"params\":{\"query\":\"hikaricp_connections_timeout\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name\":{\"query\":\"hikaricp_connections_timeout\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "2e5fda80-eb22-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HikariCP Statistics - Connections Size",
+      "visState": "{\"title\":\"Micrometer - HikariCP Statistics - Connections Size\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":30}},\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"avg\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"value\",\"customLabel\":\" \"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":false,\"type\":\"phrase\",\"key\":\"name\",\"value\":\"hikaricp_connections\",\"params\":{\"query\":\"hikaricp_connections\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name\":{\"query\":\"hikaricp_connections\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "7ee0d820-eb26-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Tomcat Statistics - Total Error Count",
+      "visState": "{\"title\":\"Micrometer - Tomcat Statistics - Total Error Count\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":30}},\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"sum\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"count\",\"customLabel\":\" \"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":false,\"type\":\"phrase\",\"key\":\"name\",\"value\":\"tomcat_global_error\",\"params\":{\"query\":\"tomcat_global_error\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name\":{\"query\":\"tomcat_global_error\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "305c28c0-f630-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Filter",
+      "visState": "{\"aggs\":[],\"params\":{\"controls\":[{\"fieldName\":\"host.keyword\",\"id\":\"1571904256159\",\"label\":\"Host\",\"options\":{\"dynamicOptions\":true,\"multiselect\":false,\"order\":\"desc\",\"size\":5,\"type\":\"terms\"},\"parent\":\"\",\"type\":\"list\",\"indexPatternRefName\":\"control_0_index_pattern\"},{\"fieldName\":\"application.keyword\",\"id\":\"1571904278079\",\"label\":\"Application\",\"options\":{\"dynamicOptions\":true,\"multiselect\":false,\"order\":\"desc\",\"size\":5,\"type\":\"terms\"},\"parent\":\"\",\"type\":\"list\",\"indexPatternRefName\":\"control_1_index_pattern\"}],\"pinFilters\":false,\"updateFiltersOnChange\":true,\"useTimeFilter\":false},\"title\":\"Micrometer - Filter\",\"type\":\"input_control_vis\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "control_0_index_pattern",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "control_1_index_pattern",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "688a06a0-f08a-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Server Requests - Percentiles",
+      "visState": "{\"title\":\"Micrometer - Http Server Requests - Percentiles\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"background_color_rules\":[{\"id\":\"0045f430-f082-11e9-9a28-838be79a01d2\"}],\"bar_color_rules\":[{\"id\":\"d0449860-f07f-11e9-9a28-838be79a01d2\"}],\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"filter\":\"\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"pivot_id\":\"uri.keyword\",\"pivot_label\":\"URI\",\"pivot_rows\":\"100\",\"pivot_type\":\"string\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"color_rules\":[{\"id\":\"91c58b70-f085-11e9-9a28-838be79a01d2\"}],\"fill\":0.5,\"filter\":\"name:http_server_requests\",\"formatter\":\"number\",\"id\":\"86023900-f085-11e9-9a28-838be79a01d2\",\"label\":\"Avg\",\"line_width\":1,\"metrics\":[{\"field\":\"mean\",\"id\":\"86026010-f085-11e9-9a28-838be79a01d2\",\"type\":\"max\"}],\"point_size\":1,\"separate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"color_rules\":[{\"id\":\"ee3ba570-f07f-11e9-9a28-838be79a01d2\"}],\"fill\":\"0\",\"filter\":\"name:http_server_requests_percentile AND phi:0.5\",\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"Median\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"max\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_filters\":[{\"color\":\"#68BC00\",\"filter\":\"phi:0.5\",\"id\":\"d22f4b40-efd8-11e9-a0f3-6bcfbfaa5d9f\",\"label\":\"50%\"}],\"split_mode\":\"filters\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"color_rules\":[{\"id\":\"7ca02160-f080-11e9-9a28-838be79a01d2\"}],\"fill\":0.5,\"filter\":\"name:http_server_requests_percentile AND phi:0.9\",\"formatter\":\"number\",\"id\":\"03c5b700-f080-11e9-9a28-838be79a01d2\",\"label\":\"90%\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"03c5b701-f080-11e9-9a28-838be79a01d2\",\"type\":\"max\"}],\"point_size\":1,\"separate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"color_rules\":[{\"id\":\"7ca02160-f080-11e9-9a28-838be79a01d2\"}],\"fill\":0.5,\"filter\":\"name:http_server_requests_percentile AND phi:0.95\",\"formatter\":\"number\",\"id\":\"99c9fdf0-f081-11e9-9a28-838be79a01d2\",\"label\":\"95%\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"99c9fdf1-f081-11e9-9a28-838be79a01d2\",\"type\":\"max\"}],\"point_size\":1,\"separate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"color_rules\":[{\"id\":\"7ca02160-f080-11e9-9a28-838be79a01d2\"}],\"fill\":0.5,\"filter\":\"name:http_server_requests_percentile AND phi:0.99\",\"formatter\":\"number\",\"id\":\"a17a1210-f081-11e9-9a28-838be79a01d2\",\"label\":\"99%\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"a17a1211-f081-11e9-9a28-838be79a01d2\",\"type\":\"max\"}],\"point_size\":1,\"separate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"#68BC00\",\"color_rules\":[{\"id\":\"91c58b70-f085-11e9-9a28-838be79a01d2\"}],\"fill\":0.5,\"filter\":\"name:http_server_requests\",\"formatter\":\"number\",\"id\":\"c2d5aa10-f085-11e9-9a28-838be79a01d2\",\"label\":\"Max\",\"line_width\":1,\"metrics\":[{\"field\":\"max\",\"id\":\"c2d5aa11-f085-11e9-9a28-838be79a01d2\",\"type\":\"max\"}],\"point_size\":1,\"separate_axis\":0,\"split_mode\":\"everything\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"table\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "ba3bf410-f097-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Server Requests - Response Time (percentile)",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Duration\",\"field\":\"value\"},\"schema\":\"metric\",\"type\":\"max\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\" \",\"drop_partials\":false,\"extended_bounds\":{},\"field\":\"@timestamp\",\"interval\":\"auto\",\"min_doc_count\":1,\"timeRange\":{\"from\":\"2019-10-18T07:00:00.000Z\",\"to\":\"2019-10-18T08:00:00.000Z\"},\"useNormalizedEsInterval\":true},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"5\",\"params\":{\"customLabel\":\" \",\"field\":\"api_status\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderAgg\":{\"enabled\":true,\"id\":\"5-orderAgg\",\"params\":{\"field\":\"value\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!median\",\"!std_dev\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\",\"!avg_bucket\",\"!max_bucket\",\"!min_bucket\",\"!sum_bucket\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"hideCustomLabel\":true,\"max\":null,\"min\":0,\"name\":\"orderAgg\",\"params\":[],\"title\":\"Order Agg\"},\"type\":\"max\"},\"orderBy\":\"custom\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"row\":true,\"size\":5},\"schema\":\"split\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"4\",\"params\":{\"customLabel\":\" \",\"field\":\"phi.keyword\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"asc\",\"orderBy\":\"_key\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"dimensions\":{\"series\":[{\"accessor\":2,\"aggType\":\"terms\",\"format\":{\"id\":\"terms\",\"params\":{\"id\":\"string\",\"missingBucketLabel\":\"Missing\",\"otherBucketLabel\":\"Other\"}},\"params\":{}}],\"splitRow\":[{\"accessor\":1,\"aggType\":\"terms\",\"format\":{\"id\":\"terms\",\"params\":{\"id\":\"string\",\"missingBucketLabel\":\"Missing\",\"otherBucketLabel\":\"Other\"}},\"params\":{}}],\"x\":{\"accessor\":0,\"aggType\":\"date_histogram\",\"format\":{\"id\":\"date\",\"params\":{\"pattern\":\"HH:mm\"}},\"params\":{\"bounds\":{\"max\":\"2019-10-18T08:00:00.000Z\",\"min\":\"2019-10-18T07:00:00.000Z\"},\"date\":true,\"format\":\"HH:mm\",\"interval\":\"PT1M\"}},\"y\":[{\"accessor\":3,\"aggType\":\"max\",\"format\":{\"id\":\"number\"},\"params\":{}}]},\"grid\":{\"categoryLines\":true,\"valueAxis\":null},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Duration\"},\"drawLinesBetweenPoints\":true,\"lineWidth\":1,\"mode\":\"normal\",\"show\":\"true\",\"showCircles\":false,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"line\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"defaultYExtents\":false,\"min\":0,\"mode\":\"normal\",\"setYExtents\":true,\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"\"},\"type\":\"value\"}]},\"title\":\"Micrometer - Http Server Requests - Response Time (percentile)\",\"type\":\"line\"}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0.5\":\"#7EB26D\",\"0.9\":\"#F2C96D\",\"0.95\":\"#EF843C\",\"0.99\":\"#BF1B00\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":false,\"type\":\"phrase\",\"key\":\"name\",\"value\":\"http_server_requests_percentile\",\"params\":{\"query\":\"http_server_requests_percentile\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name\":{\"query\":\"http_server_requests_percentile\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "cc523050-eb20-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Application - Total Requests",
+      "visState": "{\"title\":\"Micrometer - Application - Total Requests\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":45}},\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"sum\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"count\",\"customLabel\":\"Requests\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"name:\\\"http_server_requests\\\" \",\"language\":\"kuery\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "81b28800-eb21-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Application - Failed Requests",
+      "visState": "{\"title\":\"Micrometer - Application - Failed Requests\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":45}},\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"sum\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"count\",\"customLabel\":\"Requests\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"name:\\\"http_server_requests\\\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":true,\"type\":\"phrase\",\"key\":\"status.keyword\",\"value\":\"200\",\"params\":{\"query\":\"200\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"status.keyword\":{\"query\":\"200\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "6c70c4c0-ef2c-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - GC Count",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - GC Count\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Count\",\"filter\":\"name:jvm_gc_pause\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "b4b2ffa0-ef2c-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - GC Stop the World Duration",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - GC Stop the World Duration\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"sum\",\"field\":\"sum\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Duration\",\"filter\":\"name:jvm_gc_pause\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "67008c40-efe1-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Client Requests - Max Response Time",
+      "visState": "{\"title\":\"Micrometer - Http Client Requests - Max Response Time\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":30}},\"dimensions\":{\"metrics\":[{\"accessor\":0,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"max\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"max\",\"customLabel\":\" \"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":false,\"type\":\"phrase\",\"key\":\"name\",\"value\":\"http_client_requests\",\"params\":{\"query\":\"http_client_requests\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"name\":{\"query\":\"http_client_requests\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": [
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      },
+      {
+        "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+        "type": "index-pattern",
+        "id": "1ac54120-ea57-11e9-8e86-07c0a51d5650"
+      }
+    ]
+  },
+  {
+    "_id": "be7754e0-efc8-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Application - Log Event",
+      "visState": "{\"title\":\"Micrometer - Application - Log Event\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"409b93f0-efce-11e9-832b-4dc1fb3450bd\",\"color\":\"rgba(211,49,21,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"409b93f1-efce-11e9-832b-4dc1fb3450bd\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"error\",\"filter\":\"level.keyword:error\",\"terms_field\":\"level.keyword\",\"split_color_mode\":\"rainbow\"},{\"id\":\"a6dc55f0-efce-11e9-832b-4dc1fb3450bd\",\"color\":\"rgba(254,146,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"a6dc55f1-efce-11e9-832b-4dc1fb3450bd\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"warn\",\"filter\":\"level.keyword:warn\",\"terms_field\":\"level.keyword\",\"split_color_mode\":\"rainbow\"},{\"id\":\"4e6d05e0-efce-11e9-832b-4dc1fb3450bd\",\"color\":\"rgba(252,220,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"4e6d05e1-efce-11e9-832b-4dc1fb3450bd\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"info\",\"filter\":\"level.keyword:info\",\"terms_field\":\"level.keyword\",\"split_color_mode\":\"rainbow\"},{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"debug\",\"filter\":\"level.keyword:debug\",\"terms_field\":\"level.keyword\",\"split_color_mode\":\"rainbow\"},{\"id\":\"6fcbcf00-efce-11e9-832b-4dc1fb3450bd\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"6fcbcf01-efce-11e9-832b-4dc1fb3450bd\",\"type\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"trace\",\"filter\":\"level.keyword:trace\",\"terms_field\":\"level.keyword\",\"split_color_mode\":\"rainbow\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"filter\":\"name:logback_events \",\"axis_min\":\"0\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "0c5555f0-efe1-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Client Requests - Average Response Time",
+      "visState": "{\"title\":\"Micrometer - Http Client Requests - Average Response Time\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=metrics-*,q='name:http_client_requests',metric=sum:sum).divide(.es(index=metrics-*,q='name:http_client_requests',metric=sum:count)).lines(width=1).label('Response Time').yaxis(min=0)\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "e22e2d20-ef2b-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Threads",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Threads\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"76ac2560-ef31-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"76ac2561-ef31-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Daemon\",\"filter\":\"name:jvm_threads_daemon\"},{\"id\":\"f04cfef0-ef2f-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"f04cfef1-ef2f-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Live\",\"filter\":\"name:jvm_threads_live\"},{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Peak\",\"filter\":\"name:jvm_threads_peak\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "a0f7f230-efaf-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HikariCP Statistics - Connection Creation Time",
+      "visState": "{\"title\":\"Micrometer - HikariCP Statistics - Connection Creation Time\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:hikaricp_connections_creation\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"Creation TIme\",\"line_width\":1,\"metrics\":[{\"field\":\"mean\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "7e8eccb0-efa9-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HikariCP Statistics - Connections",
+      "visState": "{\"title\":\"Micrometer - HikariCP Statistics - Connections\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:hikaricp_connections_active\",\"formatter\":\"number\",\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"Active\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(251,158,0,1)\",\"fill\":\"0\",\"filter\":\"name:hikaricp_connections_idle\",\"formatter\":\"number\",\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"label\":\"Idle\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(0,156,224,1)\",\"fill\":\"0\",\"filter\":\"name:hikaricp_connections_pending\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"Pending\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "cef1a910-efaf-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HikariCP Statistics - Connection Acquire Time",
+      "visState": "{\"title\":\"Micrometer - HikariCP Statistics - Connection Acquire Time\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:hikaricp_connections_acquire\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"Acquire Time\",\"line_width\":1,\"metrics\":[{\"field\":\"mean\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "61ca8f00-f185-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Server Requests - Http Status Code",
+      "visState": "{\"title\":\"Micrometer - Http Server Requests - Http Status Code\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=metrics-*,q='name:http_server_requests AND status.keyword:2*',metric=sum:count).scale_interval(1s).lines(stack=true,width=0.2,fill=1.5).label('2XX').color(green).yaxis(label='Requests / sec',min=0),\\n.es(index=metrics-*,q='name:http_server_requests AND status.keyword:3*',metric=sum:count).scale_interval(1s).lines(stack=true,width=0.2,fill=1.2).label('3XX').color(blue),\\n.es(index=metrics-*,q='name:http_server_requests AND status.keyword:1*',metric=sum:count).scale_interval(1s).lines(stack=true,width=0.2,fill=1.5).label('1XX').color(yellow),\\n.es(index=metrics-*,q='name:http_server_requests AND status.keyword:4*',metric=sum:count).scale_interval(1s).lines(stack=true,width=0.2,fill=1.5).label('4XX').color(orange),\\n.es(index=metrics-*,q='name:http_server_requests AND status.keyword:5*',metric=sum:count).scale_interval(1s).lines(stack=true,width=0.2,fill=1.5).label('5XX').color(red),\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "b7bfb3e0-efaf-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HikariCP Statistics - Connection Usage Time",
+      "visState": "{\"title\":\"Micrometer - HikariCP Statistics - Connection Usage Time\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:hikaricp_connections_usage\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"Usage Time\",\"line_width\":1,\"metrics\":[{\"field\":\"mean\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "31ce6da0-efb2-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Tomcat Statistics - Sent & Received Bytes",
+      "visState": "{\"title\":\"Micrometer - Tomcat Statistics - Sent & Received Bytes\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:tomcat_global_sent\",\"formatter\":\"bytes\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"Sent Bytes\",\"line_width\":1,\"metrics\":[{\"field\":\"count\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"sum\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(251,158,0,1)\",\"fill\":\"0\",\"filter\":\"name:tomcat_global_received\",\"formatter\":\"bytes\",\"id\":\"401268c0-efb8-11e9-a9a6-4195201f4420\",\"label\":\"Received Bytes\",\"line_width\":1,\"metrics\":[{\"field\":\"count\",\"id\":\"401268c1-efb8-11e9-a9a6-4195201f4420\",\"type\":\"sum\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "0d968220-efd9-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Server Requests - Top 10 Most Used API endpoints",
+      "visState": "{\"title\":\"Micrometer - Http Server Requests - Top 10 Most Used API endpoints\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=metrics-*,q='name:http_server_requests',split=api:10,metric=sum:count).scale_interval(1s).lines(width=1).label('$1','^.* > api:(.+) > .*').yaxis(label='Requests / sec',min=0)\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "af82fc50-ea6e-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HTTP Statistics - Request Count",
+      "visState": "{\"title\":\"Micrometer - HTTP Statistics - Request Count\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=metrics-*,q='name:http_server_requests',split=api_status:100,metric=sum:count).scale_interval(1s).lines(width=1).label('$1','^.* > api_status:(.+) > .*').yaxis(min=0)\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "afb49560-efd9-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Server Requests - Top 10 Slowest API endpoints",
+      "visState": "{\"title\":\"Micrometer - Http Server Requests - Top 10 Slowest API endpoints\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=metrics-*,q='name:http_server_requests',split=api:10,metric=max:max).lines(width=1).label('$1','^.* > api:(.+) > .*').yaxis(min=0)\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "c14eb2b0-ef16-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Memory Usage (Eden Space)",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Memory Usage (Eden Space)\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"drop_last_bucket\":1,\"filter\":\"id.keyword:\\\"G1 Eden Space\\\" OR id.keyword:\\\"PS Eden Space\\\"\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"legend_position\":\"bottom\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0.1\",\"filter\":\"name:jvm_memory_used \",\"formatter\":\"bytes\",\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"label\":\"Used\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(251,158,0,1)\",\"fill\":\"0.1\",\"filter\":\"name:jvm_memory_committed \",\"formatter\":\"bytes\",\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"label\":\"Committed\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(0,156,224,1)\",\"fill\":\"0.1\",\"filter\":\"name:jvm_memory_max\",\"formatter\":\"bytes\",\"hide_in_legend\":0,\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"label\":\"Max\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "3731eb30-ef19-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Memory Usage (CodeHeap / Code Cache)",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Memory Usage (CodeHeap / Code Cache)\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Used\",\"filter\":\"name:jvm_memory_used \"},{\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Committed\",\"filter\":\"name:jvm_memory_committed \"},{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Max\",\"filter\":\"name:jvm_memory_max\",\"hide_in_legend\":0}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"id:\\\"CodeHeap\\\" OR id.keyword:\\\"Code Cache\\\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "05a7d710-ef18-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Memory Usage (Survivor Space)",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Memory Usage (Survivor Space)\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Used\",\"filter\":\"name:jvm_memory_used \"},{\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Committed\",\"filter\":\"name:jvm_memory_committed \"},{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Max\",\"filter\":\"name:jvm_memory_max\",\"hide_in_legend\":0}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"id.keyword:\\\"G1 Survivor Space\\\" OR id.keyword:\\\"PS Survivor Space\\\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "3cee8710-f0b6-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Application - Error Rate",
+      "visState": "{\"title\":\"Micrometer - Application - Error Rate\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"gauge\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"filter_ratio\",\"numerator\":\"NOT status.keyword:2*\",\"metric_agg\":\"sum\",\"field\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"'0.[0]%'\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Error Rate\"}],\"time_field\":\"\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"gauge_color_rules\":[{\"value\":0,\"id\":\"35b18dd0-f0bb-11e9-a53e-2fbeacca4f90\",\"gauge\":\"rgba(104,188,0,1)\",\"operator\":\"gte\"},{\"value\":0.05,\"id\":\"972d74c0-f0bb-11e9-a53e-2fbeacca4f90\",\"gauge\":\"rgba(252,196,0,1)\",\"operator\":\"gte\"},{\"value\":0.15,\"id\":\"a405e0b0-f0bb-11e9-a53e-2fbeacca4f90\",\"gauge\":\"rgba(211,49,21,1)\",\"operator\":\"gte\"}],\"gauge_width\":\"15\",\"gauge_inner_width\":\"15\",\"gauge_style\":\"half\",\"filter\":\"name:http_server_requests\",\"gauge_max\":\"1\",\"background_color\":null,\"gauge_inner_color\":null},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "cfc6fda0-efb3-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Logback Statistics - ERROR logs",
+      "visState": "{\"title\":\"Micrometer - Logback Statistics - ERROR logs\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(211,49,21,1)\",\"fill\":\"0\",\"filter\":\"name:logback_events AND level:error\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"ERROR\",\"line_width\":1,\"metrics\":[{\"field\":\"count\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"sum\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "693985c0-efb4-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Logback Statistics - TRACE logs",
+      "visState": "{\"title\":\"Micrometer - Logback Statistics - TRACE logs\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(0,156,224,1)\",\"fill\":\"0\",\"filter\":\"name:logback_events AND level:trace\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"TRACE\",\"line_width\":1,\"metrics\":[{\"field\":\"count\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"sum\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "b0259bf0-efb3-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Logback Statistics - INFO logs",
+      "visState": "{\"title\":\"Micrometer - Logback Statistics - INFO logs\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(252,220,0,1)\",\"fill\":\"0\",\"filter\":\"name:logback_events AND level:info\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"INFO\",\"line_width\":1,\"metrics\":[{\"field\":\"count\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"sum\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "fe8a9430-efb3-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Logback Statistics - WARN logs",
+      "visState": "{\"title\":\"Micrometer - Logback Statistics - WARN logs\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(254,146,0,1)\",\"fill\":\"0\",\"filter\":\"name:logback_events AND level:warn\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"WARN\",\"line_width\":1,\"metrics\":[{\"field\":\"count\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"sum\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "41c0fff0-efb4-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Logback Statistics - DEBUG logs",
+      "visState": "{\"title\":\"Micrometer - Logback Statistics - DEBUG logs\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:logback_events AND level:debug\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"DEBUG\",\"line_width\":1,\"metrics\":[{\"field\":\"count\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"sum\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "d97f8160-efb2-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Tomcat Statistics - Threads",
+      "visState": "{\"title\":\"Micrometer - Tomcat Statistics - Threads\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:tomcat_threads_current\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"Current thread\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"},{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(251,158,0,1)\",\"fill\":\"0\",\"filter\":\"name:tomcat_threads_busy\",\"formatter\":\"number\",\"id\":\"401268c0-efb8-11e9-a9a6-4195201f4420\",\"label\":\"Current thread busy\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"401268c1-efb8-11e9-a9a6-4195201f4420\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "deed1500-efb1-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Tomcat Statistics - Active Sessions",
+      "visState": "{\"title\":\"Micrometer - Tomcat Statistics - Active Sessions\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_max\":\"\",\"axis_min\":\"0\",\"axis_position\":\"left\",\"axis_scale\":\"normal\",\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(104,188,0,1)\",\"fill\":\"0\",\"filter\":\"name:tomcat_sessions_active_current\",\"formatter\":\"number\",\"id\":\"8a9f1ef0-efaf-11e9-ab34-cd468f264834\",\"label\":\"Active Sessions\",\"line_width\":1,\"metrics\":[{\"field\":\"value\",\"id\":\"8a9f4600-efaf-11e9-ab34-cd468f264834\",\"type\":\"avg\"}],\"point_size\":\"0\",\"separate_axis\":0,\"split_mode\":\"filter\",\"stacked\":\"none\"}],\"show_grid\":1,\"show_legend\":1,\"time_field\":\"@timestamp\",\"type\":\"timeseries\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "694297c0-eb25-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HTTP Statistics - Response Time",
+      "visState": "{\"title\":\"Micrometer - HTTP Statistics - Response Time\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=metrics-*,q='name:http_server_requests',split=api_status:100,metric=avg:mean).lines(width=1).label('$1','^.* > api_status:(.+) > .*').yaxis(min=0)\",\"interval\":\"auto\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "8e7cca60-ef17-11e9-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics - Memory Usage (Old Gen)",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics - Memory Usage (Old Gen)\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"b9eeef30-ef1b-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b9eeef31-ef1b-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Used\",\"filter\":\"name:jvm_memory_used \"},{\"id\":\"8e954980-ef19-11e9-8811-dbb4ffea035d\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8e954981-ef19-11e9-8811-dbb4ffea035d\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Committed\",\"filter\":\"name:jvm_memory_committed \"},{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"avg\",\"field\":\"value\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":\"0\",\"fill\":\"0.1\",\"stacked\":\"none\",\"label\":\"Max\",\"filter\":\"name:jvm_memory_max\",\"hide_in_legend\":0}],\"time_field\":\"@timestamp\",\"index_pattern\":\"metrics-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"axis_min\":\"0\",\"axis_max\":\"\",\"drop_last_bucket\":1,\"filter\":\"id.keyword:\\\"G1 Old Gen\\\" OR id.keyword:\\\"PS Old Gen\\\"\",\"legend_position\":\"bottom\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "ed3976b0-0b65-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics (Memory) - Title",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics (Memory) - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"JVM Statistics - Memory\",\"background_color\":\"rgba(104,204,202,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "360dc3f0-0b5c-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Client Requests - Title",
+      "visState": "{\"title\":\"Micrometer - Http Client Requests - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"Http Client Requests\",\"background_color\":\"rgba(115,216,255,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "1dd50190-0b66-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - JVM Statistics (GC) - Title",
+      "visState": "{\"title\":\"Micrometer - JVM Statistics (GC) - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"JVM Statistics - GC\",\"background_color\":\"rgba(104,204,202,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "4e4cfee0-0b66-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HikariCP Statistics - Title",
+      "visState": "{\"title\":\"Micrometer - HikariCP Statistics - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"HikariCP Statistics\",\"background_color\":\"rgba(104,204,202,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "758c9a60-0b66-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - HTTP Statistics - Title",
+      "visState": "{\"title\":\"Micrometer - HTTP Statistics - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"HTTP Statistics\",\"background_color\":\"rgba(104,204,202,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "e106cc30-0b5b-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Http Server Requests - Title",
+      "visState": "{\"title\":\"Micrometer - Http Server Requests - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"Http Server Requests\",\"background_color\":\"rgba(115,216,255,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "1aca9d30-0b65-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Basic Statistics - Title",
+      "visState": "{\"title\":\"Micrometer - Basic Statistics - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"Basic Statistics\",\"background_color\":\"rgba(104,204,202,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "70dc3c40-0b67-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Tomcat Statistics - Title",
+      "visState": "{\"title\":\"Micrometer - Tomcat Statistics - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"Tomcat Statistics\",\"background_color\":\"rgba(104,204,202,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "96b44ef0-0b5b-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Application - Title",
+      "visState": "{\"title\":\"Micrometer - Application - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"Application\\n\",\"background_color\":\"rgba(115,216,255,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  },
+  {
+    "_id": "9c43fda0-0b67-11ea-8e86-07c0a51d5650",
+    "_type": "visualization",
+    "_source": {
+      "title": "Micrometer - Logback Statistics - Title",
+      "visState": "{\"title\":\"Micrometer - Logback Statistics - Title\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"markdown\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"count\"}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\"}],\"time_field\":\"\",\"index_pattern\":\"\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"apm-*\",\"default_timefield\":\"@timestamp\",\"markdown\":\"Logback Statistics\",\"background_color\":\"rgba(104,204,202,1)\",\"markdown_less\":\"font-weight:bold;\\ncolor:white;\",\"markdown_css\":\"#markdown-61ca57f0-469d-11e7-af02-69e470af7417{font-weight:bold;color:white}\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "7.0.1"
+    },
+    "_references": []
+  }
+]

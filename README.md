@@ -1,4 +1,4 @@
-# Micrometer Kibana Dashboard
+# Micrometer Kibana (7.1.1) Dashboard 
 
 Other languages: [English](README.md), [日本語](README.ja.md)
 

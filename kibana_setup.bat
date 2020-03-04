@@ -7,7 +7,7 @@ if defined ELASTIC_USER (
   set CURL_UESR_OPT=-u %ELASTIC_USER%:%ELASTIC_PASSWORD%
 )
 
-curl %CURL_UESR_OPT% -X POST "http://%KIBANA_HOST%:%KIBANA_PORT%/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana-index.ndjson
-curl %CURL_UESR_OPT% -X POST "http://%KIBANA_HOST%:%KIBANA_PORT%/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana-visualize.ndjson
-curl %CURL_UESR_OPT% -X POST "http://%KIBANA_HOST%:%KIBANA_PORT%/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana-dashboard.ndjson
+curl %CURL_UESR_OPT% -X POST "http://%KIBANA_HOST%:%KIBANA_PORT%/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana-index.json
+curl %CURL_UESR_OPT% -X POST "http://%KIBANA_HOST%:%KIBANA_PORT%/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana-visualize.json
+curl %CURL_UESR_OPT% -X POST "http://%KIBANA_HOST%:%KIBANA_PORT%/api/saved_objects/_import" -H "kbn-xsrf: true" --form file=@kibana-dashboard.json
 
