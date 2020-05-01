@@ -19,29 +19,12 @@ docker-compose up -d
 
 ## Kibanaダッシュボードセットアップ
 
-### kibana_setup.shの設定を必要に応じて修正する。
-```
-KIBANA_HOST=localhost
-KIBANA_PORT=5601
-ELASTIC_USER=
-ELASTIC_PASSWORD=
-```
-Windowsの場合はkibana_setup.batを修正する。
-```
-set KIBANA_HOST=localhost
-set KIBANA_PORT=5601
-set ELASTIC_USER=
-set ELASTIC_PASSWORD=
-```
+KibanaのManagement→Saved Objectsを開き、以下の順に設定ファイルをインポートする。
 
-### セットアップスクリプトを実行する。
-```
-./kibana_setup.sh
-```
-Windowsの場合:
-```
-kibana_setup.bat
-```
+1. kibana-index.json
+2. kibana-visualize.json
+3. kibana-dashboard.json
+
 
 ## アプリケーション設定
 
